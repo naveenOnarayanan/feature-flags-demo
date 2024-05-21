@@ -22,17 +22,17 @@ ldclient.set_config(Config("sdk-key-123abc"))
 client = ldclient.get()
 
 context = Context.builder("context-key-123abc").name("Sandy").build()
-flag_value = client.variation("flag-key-123abc", context, False)
+flag_value = client.variation("is-dark-mode-enabled", context, False)
 if flag_value:
     print("Flag enabled")
 else:
     print("Flag disabled")
 
 
-show_feature = ldclient.get().variation("flag-key-123abc", context, False)
+show_feature = ldclient.get().variation("is-dark-mode-enabled", context, False)
 
 
-detail = client.variation_detail("flag-key-123abc", my_context, False)
+detail = client.variation_detail("is-dark-mode-enabled", my_context, False)
 value = detail.value
 index = detail.variation_index
 reason = detail.reason
