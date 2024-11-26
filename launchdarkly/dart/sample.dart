@@ -17,14 +17,14 @@ class SampleDart {
 
     if (flagValue) {
       // The code to run if the feature is on
-      System.out.println("Dark mode!");
+      print("Dark mode!");
     } else {
       // The code to run if the feature is off
       bool otherFlag = await ldClient.boolVariation("is-ameyas-weird-blue-theme", false);
       if (otherFlag) {
-        System.out.println("Why? Just... why?");
+        print("Why? Just... why?");
       } else {
-        System.out.println("Light mode it is, then!");
+        print("Light mode it is, then!");
       }
     }
 
